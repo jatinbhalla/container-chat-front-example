@@ -19,6 +19,27 @@ jobs:
          run: |
            npm install
            npm test
+#      - name: SonarCloud Scan
+#          uses: SonarSource/sonarcloud-github-action@v1.7
+#          with:
+#            args:
+#            projectBaseDir:
+#      - name: SonarQube Quality Gate Check
+#        uses: SonarSource/sonarqube-quality-gate-action@v1.0.0
+#        with:
+#        scanMetadataReportFile: # optional, default is .scannerwork/report-task.txt
+#      - name: Sonar Build Breaker
+#        uses: jkumar19/sonar-build-breaker@3.0.0
+#        with:
+#        # pass sonar project key
+#        project_key: 
+#        # pass sonar token
+#        sonar_token: 
+#        # pass sonar root url
+#        sonar_url: 
+#        # pass sonar branch name
+#        sonar_branch: 
+    
    cd:
      runs-on: ubuntu-latest
      needs: ci
